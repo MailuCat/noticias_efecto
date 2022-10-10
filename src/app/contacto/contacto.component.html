@@ -1,0 +1,116 @@
+<div class="container">
+    <h1>Contacto</h1>
+    <div class="row m-2">
+      <div class="col col-xs-12">
+        <div [hidden]="submitted">
+          <form (ngSubmit)="onSubmit()" #contactoForm="ngForm">
+            <div class="mb-3 form-group">
+              <label class="form-label">Nombre</label>
+              <input type="text"  class="form-control" id="name" placeholder="Escribe tu mail" required
+                [(ngModel)]="model.name" name="name" #name="ngModel">
+              <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                Por favor escribe tu nombre
+              </div>
+  
+            </div>
+            <div class="mb-3 form-group">
+              <label class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="mail" placeholder="Escribe tu correo" required
+                [(ngModel)]="model.mail" name="mail" #mail="ngModel">
+              <div [hidden]="mail.valid || mail.pristine" class="alert alert-danger">
+                Recuerda colocar tu correo
+              </div>
+            </div>
+            <div class="mb-3 form-group">
+              <label class="form-label">Mensaje</label>
+              <textarea type="text" class="form-control" id="mensaje" rows="3" required [(ngModel)]="model.mensaje"
+                name="mensaje"></textarea>
+  
+            </div>
+            <div class="col-12 pt-4 form_boton">
+              <button class="btn btn-success btn btn-default"  type="submit" [disabled]="!contactoForm.form.valid">Enviar</button>
+              
+            </div>
+            <div [hidden]="!submitted">
+              <h2>Tú mensaje ha sido enviado:</h2>
+              <div class="row">
+                <div class="col-xs-3">Name</div>
+                <div class="col-xs-9">{{ model.name }}</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-3">Alter Ego</div>
+                <div class="col-xs-9">{{ model.mail }}</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-3">Power</div>
+                <div class="col-xs-9">{{ model.mensaje }}</div>
+              </div>
+              <br>
+              </div>
+          </form>
+        </div>
+        <div [hidden]="!submitted">
+          <h2>Tú mensaje ha sido enviado:</h2>
+          <div class="row">
+            <div class="col-xs-3">Name</div>
+            <div class="col-xs-9">{{ model.name }}</div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3">Correo electrónico</div>
+            <div class="col-xs-9">{{ model.mail }}</div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3">Mensaje</div>
+            <div class="col-xs-9">{{ model.mensaje}}</div>
+          </div>
+          <br>
+         </div>
+      </div>
+      <div class="col">
+        <img style="width: 25rem" src="">
+        <div>
+          <svg style="width:43px;height:43px" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M22 5.5H9C7.9 5.5 7 6.4 7 7.5V16.5C7 17.61 7.9 18.5 9 18.5H22C23.11 18.5 24 17.61 24 16.5V7.5C24 6.4 23.11 5.5 22 5.5M22 9.17L15.5 12.5L9 9.17V7.5L15.5 10.81L22 7.5V9.17M5 16.5C5 16.67 5.03 16.83 5.05 17H1C.448 17 0 16.55 0 16S.448 15 1 15H5V16.5M3 7H5.05C5.03 7.17 5 7.33 5 7.5V9H3C2.45 9 2 8.55 2 8S2.45 7 3 7M1 12C1 11.45 1.45 11 2 11H5V13H2C1.45 13 1 12.55 1 12Z" />
+          </svg>
+          <p>mlcatalans@gmail.com</p>
+        </div>
+        <div>
+          <svg style="width:43px;height:43px" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M15,12H17A5,5 0 0,0 12,7V9A3,3 0 0,1 15,12M19,12H21C21,7 16.97,3 12,3V5C15.86,5 19,8.13 19,12M20,15.5C18.75,15.5 17.55,15.3 16.43,14.93C16.08,14.82 15.69,14.9 15.41,15.18L13.21,17.38C10.38,15.94 8.06,13.62 6.62,10.79L8.82,8.59C9.1,8.31 9.18,7.92 9.07,7.57C8.7,6.45 8.5,5.25 8.5,4A1,1 0 0,0 7.5,3H4A1,1 0 0,0 3,4A17,17 0 0,0 20,21A1,1 0 0,0 21,20V16.5A1,1 0 0,0 20,15.5Z" />
+          </svg>
+          <p>+56 994447212</p>
+        </div>
+      </div>
+    </div>
+  </div>"    
+      <app-footer></app-footer>
+   <style>
+    
+    .contacto {
+        background-color: #c6dadd;
+      }
+    .contacto  h1{
+      
+      text-align: center;
+      font-family: 'Oxygen', sans-serif;
+    
+    }
+  
+    form-group{
+      text-align: center;
+    }
+  
+    input, textarea{
+      width: 50%;
+      margin-left:25%;
+    }
+  
+    .container{
+      text-align: center;
+      font-family: 'Oxygen', sans-serif;
+      font-size: large;
+    ;
+    }
+    </style> 

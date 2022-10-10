@@ -1,0 +1,94 @@
+<div class="logo" role="banner">
+    <a routerLink="/"><img src="../assets/logo.png" width="300px"></a>
+    <p >Noticias</p>
+  </div>
+  
+  <nav class="toolbar">
+    <ul>
+        <a  routerLink="/animales-component"><li class="menu-item">Animales</li></a>
+        <a  routerLink="/mar-component"><li class="menu-item">Mar</li></a>
+        <a  routerLink="/tierra-component"><li class="menu-item">Tierra</li></a>
+        <a  routerLink="/aire-component"><li class="menu-item">Aire</li></a>
+        <a  routerLink="/investigacion-component"><li class="menu-item">Investigación</li></a>
+    </ul>
+  </nav>
+  <style>body {
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+:host {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 8px 0;
+    color: #3f3f42;
+    ;
+}
+
+p {
+    margin: 0;
+    color: #3f3f42;
+}
+
+header {
+    background-color: #009688;
+    width: 100vw;
+}
+
+.toolbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    justify-content: center;
+    width: 100vw;
+    background-color: #00A695;
+}
+
+.logo {
+    text-align: center;
+    width: 100vw;
+    background-color: #009688;
+}
+
+nav ul {
+    list-style: none;
+}
+
+ul {
+    display: block;
+}
+
+.menu-item {
+    flex-grow: 2;
+    text-align: center;
+    float: left;
+    width: 6.5em;
+    font-size: 1.2em;
+    font-family: 'Karla', sans-serif;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.menu-item:hover {
+    background-color: #00C9B5;
+}</style>

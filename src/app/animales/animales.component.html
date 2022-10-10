@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 class="m-5">Noticias sobre animales</h1>
+    <div id="Noticia_Uno container" class="card" >
+        <div class="noticias-card" *ngFor="let noticia of noticiasanimales">
+        <div class="card-body">
+           <h5 class="card-title"><span>{{noticia.titulo}}</span></h5>
+           <p class="card-text">{{noticia.texto}}</p>
+        </div>
+        <div class="card-photo">
+            <img src="{{noticia.imagen}}"
+            alt="Card image cap">
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

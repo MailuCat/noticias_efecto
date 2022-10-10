@@ -1,0 +1,16 @@
+<div class="container">
+    <h1 clas="m-5"ng generate component hero-detailng generate component hero-detailng generate component hero-detail>Noticias sobre la tierra</h1>
+        <div id="Noticia_Uno container" class="card" >
+            <div class="noticias-card" *ngFor="let noticia of noticiastierra">
+            <div class="card-body">
+               <h5 class="card-title"><span>{{noticia.titulo}}</span></h5>
+               <p class="card-text">{{noticia.texto}}</p>
+            </div>
+            <div class="card-photo">
+            <img src="{{noticia.imagen}}"
+                alt="Card image cap">
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

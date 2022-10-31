@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Meta, } from '@angular/platform-browser';
+import { NgModule, OnInit } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+
 import { AireComponent } from './aire/aire.component';
 import { PortadaComponent } from './portada/portada.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -14,6 +15,7 @@ import { InvestigacionComponent } from './investigacion/investigacion.component'
 import { MarComponent } from './mar/mar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewssectionbComponent } from './newssectionb/newssectionb.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -29,16 +31,26 @@ import { NewssectionbComponent } from './newssectionb/newssectionb.component';
     ContactoComponent,
     InvestigacionComponent,
     MarComponent,
-    NewssectionbComponent
+    NewssectionbComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    
+        
   ],
-  providers: [],
+  providers: [Meta],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+
+export class AppModule implements OnInit {
+
+	constructor(private meta: Meta) {
+
+		
+	}
+		ngOnInit(): void {}
+}

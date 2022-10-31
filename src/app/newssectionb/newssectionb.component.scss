@@ -1,0 +1,50 @@
+a{
+    text-decoration: none;
+    color: brown;
+}
+.card-contacto{
+    text-align: center;
+    color: brown;
+}
+
+.container{
+    margin: 1px;
+    margin-top: 40px;
+}
+
+h5,
+h4,
+p{
+    font-family: 'Oxygen', sans-serif;
+    color: brown;
+}
+
+h4:hover {color: gray}
+
+span{
+    color: teal;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+}
+
+hr {
+    background-color: teal;
+    height: 3px;
+}
+
+    /* Responsive Styles */
+    @media screen and (max-width: 798px) {
+        .menu-item {
+            flex-grow: 2;
+            float: left;
+            width: 6em;
+            font-size: 0.7em;
+        }
+
+    }
+   
+    @media screen and (max-width: 596px) {    }
+    
+
+
+

@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+  .row {
+margin: 0px;
+  }
+  .colum {
+    text-align: center;
+  }
+  h1, hr{
+    text-align: left;
+    padding: 5px;
+    margin: 20px 240px;
+  }
+  h4{
+    margin: 20px 240px;
+    text-align: left;
+    color: #734124;
+  }
+  p{
+    font-size: 23px;
+    margin: 20px 240px;
+  }
+  
+  img {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5px;
+  width: 70%;
+}
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.redesSociales{
+  display: block;
+  margin-top: 30px;
+}
+
+fa-icon{
+  font-size: 30px;
+  padding: 5px;
+  color:	#787878;
+}
+.fecha{
+  position: relative;
+  right: 420px;
+}
+
+p{
+    text-align: justify;
+}
+a{
+  text-decoration: none;
+}

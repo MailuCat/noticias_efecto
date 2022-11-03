@@ -1,5 +1,7 @@
-import { BrowserModule, Meta, } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
+import {Title} from '@angular/platform-browser'
+import { SeoService } from '../seo.service';
+
 import { faFacebook, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -12,16 +14,17 @@ import { faFacebook, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-
 
 export class PumacorredorComponent implements OnInit {
  
-  title= "Hola soy Huemul"
-  constructor(private  meta: Meta ) {
 
-		//Set Open Graph
-	  	//this.meta.updateTag({property: 'og:title', content: 'todo'});
-	  	/*this.meta.updateTag({property: 'og:image', content: './assets/desierto_florido.jpg'});
-	  	this.meta.updateTag({property: 'og:url', content: 'https://noticias.efectomariposa.org/pumacorredor-component'})  */
-	}
+  constructor(private title : Title, private seo:SeoService) { } 
+		
+	
   ngOnInit(): void {
-    this.meta.addTag( { name: "description", content:"Meta description goes here." } );
-    this.meta.addTag( { name: "description", content:"Meta description goes here." } );
-  }
+    let t:string="Investigacion pumas";
+     this.title.setTitle(t)
+     this.seo.generateTags({
+      title:"Establecen corredores biológicos",
+      description:"",
+      slug:"/pumas-component"
+     })
+    }
 }

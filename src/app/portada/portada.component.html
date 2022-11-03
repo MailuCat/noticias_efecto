@@ -16,7 +16,7 @@
          <div class="card p-4" *ngFor="let noticiados of noticiassecundarias">
           <img class="card-img-top" src="{{noticiados.imagen}}" alt="Card image cap">
              <div class="card-body">
-                <h5 class="card-title">{{noticiados.titulo}}</h5>
+                <a routerLink="{{noticiados.enlace}}"><h5 class="card-title">{{noticiados.titulo}}</h5></a>
                 <p class="card-text">{{noticiados.texto}}</p>
                 <p class="card-text"><small class="text-muted">20-09-2022</small></p>
              </div>

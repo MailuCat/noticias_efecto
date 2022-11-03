@@ -1,5 +1,7 @@
 import { BrowserModule, Meta, } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
+import {Title} from '@angular/platform-browser'
+import { SeoService } from '../seo.service';
 
 @Component({
   selector: 'app-desierto',
@@ -8,13 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DesiertoComponent {
 
-  constructor(private meta:Meta){}
+  constructor(private title : Title, private seo:SeoService) { } 
     OnInit() {
       // add new tag
-      this.meta.addTag({ name: "description", content:"Meta description goes here." });
-  
-      // update meta tag
-      this.meta.updateTag( { name: "description", content:"No meta found." }, "name='description'");
+      let t:string="Desierto florido"
+     this.title.setTitle(t)
+     this.seo.generateTags({
+      title:"Futuro Parque Nacional Desiero Florido",
+      description:"200 plantas endémicas serán protegidas",
+      slug:"/desierto-component"
+     })
     }
 
 }

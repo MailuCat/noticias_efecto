@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import {Meta} from "@angular/platform-browser";
-
+import { faFacebook} from '@fortawesome/free-brands-svg-icons';
+import { faTwitter} from '@fortawesome/free-brands-svg-icons';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,34 +9,7 @@ import {Meta} from "@angular/platform-browser";
 })
 export class AppComponent    {
   title = 'actualidad';
-
-  constructor(private metaService:Meta){
-    //this.addTag();
-  }
- 
- addTag(){
-   this.metaService.addTags([
-      { name: 'description', 
-        content: 'Article Description' 
-      },
-      { name: 'robots', content: 'index,follow' },
-      { property: 'og:title', content: 'Content Title' }
-   ]);
-  }
+  faTwitter = faTwitter;
+  faFacebook = faFacebook
+  constructor(private metaService:Meta){ }
 }
-
-//Primera prueba  Mantener esto pero quitar open graph del index 
-//constructor(private metaService:Meta){
-  //this.addTag();
-
-
-/* addTag(){
- this.metaService.addTags([
-    { name: 'description', 
-      content: 'Article Description' 
-    },
-    { name: 'robots', content: 'index,follow' },
-    { property: 'og:title', content: 'Content Title' }
- ]);
-}*/
-

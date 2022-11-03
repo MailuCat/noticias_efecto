@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Title} from '@angular/platform-browser'
+import { SeoService } from '../seo.service';
+
 
 @Component({
   selector: 'app-veganismo',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VeganismoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private title : Title, private seo:SeoService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit() {
+     let t:string="soy veganismo";
+     this.title.setTitle(t)
+     this.seo.generateTags({
+      title: "nombre veganos",
+      description: "descripcion vegetales",
+      slug:"veganismo/component"
+     })
+ 
+
+}
 
 }

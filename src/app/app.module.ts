@@ -3,7 +3,6 @@ import { NgModule, OnInit } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-
 import { AireComponent } from './aire/aire.component';
 import { PortadaComponent } from './portada/portada.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -16,8 +15,7 @@ import { MarComponent } from './mar/mar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewssectionbComponent } from './newssectionb/newssectionb.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
-
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -35,11 +33,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NgbModule,
     FormsModule,
-        
+    FontAwesomeModule,
+    CommonModule
   ],
   providers: [Meta],
   bootstrap: [AppComponent]
@@ -48,9 +47,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 export class AppModule implements OnInit {
 
-	constructor(private meta: Meta) {
+	constructor(private meta: Meta) {	}
 
-		
-	}
 		ngOnInit(): void {}
 }

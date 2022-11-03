@@ -1,13 +1,7 @@
 <div class="container">
     <h1 class="m-5">Noticias sobre animales</h1>
         <div id="Noticia_Uno container" class="card" >
-            <div class="button-row">
-                <div id="fb-root"></div>
-                <div class="fb-share-button" 
-            data-href="https://noticias.efectomariposa.org/animales-component"
-            data-layout="button_count">
-                </div>
-        <div class="noticias-card" *ngFor="let noticia of noticiasanimales">
+             <div class="noticias-card" *ngFor="let noticia of noticiasanimales">
         <div class="card-body">
            <a routerLink="{{noticia.enlace}}"><h5 class="card-title"><span>{{noticia.titulo}}</span></h5></a>
            <p class="card-text">{{noticia.texto}}</p>

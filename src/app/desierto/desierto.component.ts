@@ -11,14 +11,15 @@ import { SeoService } from '../seo.service';
 export class DesiertoComponent {
 
   constructor(private title : Title, private seo:SeoService) { } 
-    OnInit() {
+  ngOnInit(): void {
       // add new tag
-      let t:string="Desierto florido"
+      let t:string="Desierto florido";
      this.title.setTitle(t)
      this.seo.generateTags({
       title:"Futuro Parque Nacional Desiero Florido",
       description:"200 plantas endémicas serán protegidas",
-      slug:"/desierto-component"
+      slug:"/desierto-component",
+      image:"https://efectomariposa.org/cpg/albums/userpics/10001/1/normal_desierto_florido.jpg"
      })
     }
 

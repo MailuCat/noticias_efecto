@@ -1,17 +1,36 @@
-<div class="logo" role="banner">
-    <a routerLink="/"><img src="../assets/logo.png" width="300px"></a>
-    <p >Noticias</p>
-  </div>
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid" [ngStyle]="{'background-color':'#029789'}">
+        <div class="brand">
+        <a class="navbar-brand" routerLink="/"><img src="../assets/logo.png" width="300px"></a>
+    </div>
+        
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Portada</a>
+                  </li>
+                <li class="nav-item">
+                <a  class="nav-link" routerLink="/animales-component" >Animales</a>
+                </li>
+                <li class="nav-item">
+                <a  class="nav-link" routerLink="/mar-component">Mar</a>
+                </li>
+                <li class="nav-item">
+                <a  class="nav-link" routerLink="/tierra-component">Tierra</a>
+                </li>
+                <li class="nav-item">
+                <a  class="nav-link" routerLink="/aire-component" >Aire</a>
+                </li>
+        </div>
+    </div>
+</nav>
   
-  <nav class="toolbar">
-    <ul>
-        <a  routerLink="/animales-component"><li class="menu-item">Animales</li></a>
-        <a  routerLink="/mar-component"><li class="menu-item">Mar</li></a>
-        <a  routerLink="/tierra-component"><li class="menu-item">Tierra</li></a>
-        <a  routerLink="/aire-component"><li class="menu-item">Aire</li></a>
-    </ul>
-  </nav>
-  <style>
+<style>
   
   body {
     padding: 0;

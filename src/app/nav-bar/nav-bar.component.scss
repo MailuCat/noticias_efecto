@@ -1,6 +1,17 @@
-p{
+.brand{
+    display: block;
+    width: 100vw;
+}
+
+li{
     color:white ;
-    text-align: center;
-    font-family: Roboto; 
-    font-size: 1.2em
-} 
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1.2em;
+   list-style-type:none;
+   margin: 10px
+}
+.navbar-toggler{
+    margin: 7px;
+    border-color:azure;
+ }
+

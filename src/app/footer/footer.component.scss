@@ -1,38 +1,46 @@
 footer{
-    background-color: #009688; 
     text-align: center;
-    
-vertical-align: baseline;
-    height: 4.5em;  
+    vertical-align: baseline;
     color: white;
-    margin: auto;
-
 }
 
-a {
-    text-decoration: none;
-}
 p{
     padding-top: 0.9em;
 }
 .contacto {
     color: white;
-    font-size:1.2em;
+    font-size:1em;
     float: right;
     
  }
 
+ .name{
+    color: white;
+    font-size: 1em;
+ }
+
 
 #twitter-logo {
-    width: 5em;
+    width: 1em;
     margin: 8px; 
     float: right; 
     line-height: 200px;
 }
-
-.name{
-
-vertical-align: baseline;
-  
+@media screen and (max-width: 750px) {
+    .name{
+        display: none;
+    }
+    #twitter-logo{
+        text-align: center;
+        float: inherit;
+        margin: 0;
+        
+    }
+    .contacto{
+         float: inherit;
+    }
+    p{
+        padding: 0;
+    }
 }
      

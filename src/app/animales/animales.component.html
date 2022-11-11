@@ -1,16 +1,14 @@
-<div class="container">
-    <h1 class="m-5">Noticias sobre animales</h1>
-        <div id="Noticia_Uno container" class="card" >
-             <div class="noticias-card" *ngFor="let noticia of noticiasanimales">
+<div class="container m-4">
+    <h1 class="mt-5">Los animales</h1>
+       
+    <div class="noticias-card card" *ngFor="let noticia of noticiasanimales">
         <div class="card-body">
-           <a routerLink="{{noticia.enlace}}"><h5 class="card-title"><span>{{noticia.titulo}}</span></h5></a>
-           <p class="card-text">{{noticia.texto}}</p>
+            <a routerLink="{{noticia.enlace}}"><h5 class="card-title"><span>{{noticia.titulo}}</span></h5></a>
+            <p class="card-text">{{noticia.texto}}</p>
         </div>
-        
-        <div class="card-photo">
-            <img src="{{noticia.imagen}}"
-            alt="Card image cap">
-        </div>
+        <img  class="card-photo" src="{{noticia.imagen}}" alt="Card image cap">
     </div>
+  
+</div>
 
 <app-footer></app-footer>

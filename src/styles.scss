@@ -3,18 +3,45 @@
 @import 'bootstrap/scss/bootstrap';
 @import "bootstrap/dist/css/bootstrap.css";
 
-
-.fb-share-button {
-  margin: 0.2em;
-  display: inline-block;
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+    color: #3f3f42;
 }
 
-svg{
-  width: 35px;
-  display: inline;
-
-}
-
-  .iconos{
-    display: flex;
+  a{
+    text-decoration: none;
   }
+  p {
+    margin: 0;
+    color: #3f3f42;
+}
+  .card-title, h1 {
+    font-size: 26px;
+    font-family: 'Playfair Display', serif;
+}
+.card-text {
+    font-size: 16px;
+    font-family: 'Oxygen', sans-serif;
+}
+.noticias-card {
+  display: flex;
+}
+.card-photo {
+  box-sizing: border-box;
+  width: 568px;
+}
+
+.card-photo img {
+  width: 496px;
+  height: 331px;
+  padding: 6px;
+}
+h1{
+  font-size: 3em;
+}

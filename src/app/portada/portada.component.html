@@ -1,20 +1,17 @@
 <div id="grid" role="main" class="container mt-5">
-    <div id="Noticia_Uno container" class="card" >
-   
-
-      <div class="noticias-card" *ngFor="let noticia of noticiasdeldia">
-          <div class="card-body">
-            <a routerLink="{{noticia.enlace}}"><h5 class="card-title"><span>{{noticia.titulo}}</span></h5></a>
-            <p class="card-text">{{noticia.texto}}</p>
-          </div>
-          <div class="card-photo">
-          <img src="{{noticia.imagen}}"
-              alt="Card image cap">
-          </div>
-      </div>
-      <div class="card-group">
-         <div class="card p-4" *ngFor="let noticiados of noticiassecundarias">
-          <img class="card-img-top" src="{{noticiados.imagen}}" alt="Card image cap">
+    <div id="Noticia_Uno container" class="card" >      
+         <div class="noticias-card" *ngFor="let noticia of noticiasdeldia">
+            <div class="card-body">
+                <a routerLink="{{noticia.enlace}}"><h5 class="card-title"><span>{{noticia.titulo}}</span></h5></a>
+                <p class="card-text">{{noticia.texto}}</p>
+            </div>
+            <img class=" card-photo" src="{{noticia.imagen}}"
+                 alt="Card image cap">
+            
+        </div>
+        <div class="card-group">
+            <div class="card p-4" *ngFor="let noticiados of noticiassecundarias">
+             <img class="card-img-top" src="{{noticiados.imagen}}" alt="Card image cap">
              <div class="card-body">
                 <a routerLink="{{noticiados.enlace}}"><h5 class="card-title">{{noticiados.titulo}}</h5></a>
                 <p class="card-text">{{noticiados.texto}}</p>
@@ -31,104 +28,3 @@
   </div>
 </div>
 <app-footer></app-footer>
-
-
-<style>
-  body {
-      padding: 0;
-      margin: 0;
-  }
-
-  :host {
-      font-family: Roboto, Helvetica, Arial, sans-serif;
-      box-sizing: border-box;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-      margin: 8px 0;
-      color: #3f3f42;
-      ;
-  }
-
-  p {
-      margin: 0;
-      color: #3f3f42;
-  }
- 
-  #grid {
-      display: grid;
-      width: 100%;
-      grid-template-columns: 2fr 0.5fr;
-  }
- 
-  .noticias-card {
-      display: flex;
-  }
-
-  .card-title {
-      font-size: 26px;
-      font-family: 'Playfair Display', serif;
-      ;
-  }
-
-  .card-text {
-      font-size: 16px;
-      font-family: 'Oxygen', sans-serif;
-  }
-
-  .card-photo {
-      box-sizing: border-box;
-      width: 568px;
-  }
-
-  .card-photo img {
-      width: 496px;
-      height: 331px;
-      padding: 6px;
-  }
-
-  /* Responsive Styles */
-  @media screen and (max-width: 798px) {
-      .menu-item {
-          flex-grow: 2;
-          float: left;
-          width: 6em;
-          font-size: 0.7em;
-      }
-
-      .noticias-card {
-          display: block;
-          width: 100%;
-          text-align: center;
-      }
-
-      #noticia_dos {
-          display: none;
-      }
-
-  }
-
-  @media screen and (max-width: 596px) {
-      .card {
-          display: block;
-      }
-
-      .card-photo {
-          text-align: center;
-          width: 100vw;
-      }
-
-      .card-photo img {
-          max-width: 320px;
-      }
-  }
-</style>
-
-<router-outlet></router-outlet>

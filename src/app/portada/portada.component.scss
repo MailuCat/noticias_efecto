@@ -3,55 +3,55 @@ body {
     margin: 0;
 }
 
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 8px 0;
-    color: #3f3f42;
-    ;
-}
-
-p {
-    margin: 0;
-    color: #3f3f42;
-}
-
-a{
-    text-decoration: none;
-}
-
 #grid {
     display: grid;
     width: 100%;
     grid-template-columns: 2fr 0.5fr;
 }
-
-.noticias-card {
+.noticias-card{
     display: flex;
 }
 
-.card-title {
-    font-size: 26px;
-    font-family: 'Playfair Display', serif;
-    ;
-}
-
 .card-text {
-    font-size: 16px;
-    font-family: 'Oxygen', sans-serif;
+   text-align: left;
 }
 
-.card-photo {
-    box-sizing: border-box;
-    width: 568px;
-}
-
-.card-photo img {
-    width: 496px;
+.card-photo{
+    width: 100%;
     height: 331px;
-    padding: 6px;
+    padding: 14px;
 }
+
+/* Responsive Styles */
+  
+  @media screen and (max-width: 1196px) {
+
+    .photo{
+        text-align: center;
+    }
+    .noticias-card {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .card-group{
+        display: grid;
+    }
+    #grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2.5fr;
+    }
+
+    #noticia_dos {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 596px) {
+   
+     .card-photo img {
+        max-width: 320px;
+    }
+}
+

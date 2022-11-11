@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {Title} from '@angular/platform-browser'
 import { SeoService } from '../seo.service';
 
-import { faFacebook, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-
 
 @Component({
   selector: 'app-pumacorredor',
@@ -19,12 +17,13 @@ export class PumacorredorComponent implements OnInit {
 		
 	
   ngOnInit(): void {
-    let t:string="Investigacion pumas";
+    let t:string="Identifican corredores biológicos de pumas en la RM";
      this.title.setTitle(t)
      this.seo.generateTags({
-      title:"Establecen corredores biológicos",
-      description:"",
-      slug:"/pumas-component"
+      title:"Identifican corredores biológicos de pumas en la RM",
+      description:"Estas rutas deberían ser protegidas para conservar la especie",
+      slug:"pumacorredor-component",
+      image:"https://gefmontana.mma.gob.cl/wp-content/uploads/2021/12/Imagen1.png"
      })
     }
 }
